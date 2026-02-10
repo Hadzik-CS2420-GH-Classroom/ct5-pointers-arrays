@@ -8,7 +8,9 @@
       "Bash(cmake:*)",
       "Bash(\"C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe\" -B build -S .)",
       "Bash(\"C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe\" --build build)",
-      "Bash(\"C:\\\\DEV\\\\WEBER\\\\CS2420\\\\module3\\\\ct5-pointers-arrays\\\\build\\\\Debug\\\\ct5-pointers-arrays.exe\")"
+      "Bash(\"C:\\\\DEV\\\\WEBER\\\\CS2420\\\\module3\\\\ct5-pointers-arrays\\\\build\\\\Debug\\\\ct5-pointers-arrays.exe\")",
+      "Bash(\"C:/Program Files/Microsoft Visual Studio/18/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe\" --build build --clean-first)",
+      "Bash(git checkout:*)"
     ]
   }
 }
