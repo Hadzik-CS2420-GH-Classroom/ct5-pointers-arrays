@@ -159,11 +159,11 @@ jobs:
         timeout: 10
         max-score: 1
 
-    - name: Walking with Pointer Loop (2 points)
+    - name: Walking with Pointer Loop (3 points)
       id: walk-ptr
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Walking with Pointer Loop (2 points)
+        test-name: Walking with Pointer Loop (3 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -172,7 +172,7 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 2
+        max-score: 3
 
     # ==================== Pointers as Arrays Tests ====================
 
