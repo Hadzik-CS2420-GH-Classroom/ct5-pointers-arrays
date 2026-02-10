@@ -22,11 +22,11 @@ jobs:
         cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
         cmake --build build --config Release
 
-    - name: Build Check (5 points)
+    - name: Build Check (2 points)
       id: build
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Build Check (5 points)
+        test-name: Build Check (2 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -35,15 +35,15 @@ jobs:
             echo "Build failed" && exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 2
 
     # ==================== Pointers and Arrays Tests ====================
 
-    - name: Pointer Points to First Element (5 points)
+    - name: Pointer Points to First Element (2 points)
       id: ptr-first
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Pointer Points to First Element (5 points)
+        test-name: Pointer Points to First Element (2 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -52,13 +52,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 2
 
-    - name: Address of Element 0 (5 points)
+    - name: Address of Element 0 (1 point)
       id: addr-elem0
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Address of Element 0 (5 points)
+        test-name: Address of Element 0 (1 point)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -67,13 +67,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 1
 
-    - name: Address of Element 1 (5 points)
+    - name: Address of Element 1 (1 point)
       id: addr-elem1
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Address of Element 1 (5 points)
+        test-name: Address of Element 1 (1 point)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -82,13 +82,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 1
 
-    - name: Bytes Between Elements (5 points)
+    - name: Bytes Between Elements (2 points)
       id: bytes-between
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Bytes Between Elements (5 points)
+        test-name: Bytes Between Elements (2 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -97,13 +97,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 2
 
-    - name: Dereferenced Value (5 points)
+    - name: Dereferenced Value (2 points)
       id: deref-value
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Dereferenced Value (5 points)
+        test-name: Dereferenced Value (2 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -112,13 +112,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 2
 
-    - name: Modify Through Pointer (5 points)
+    - name: Modify Through Pointer (2 points)
       id: modify-ptr
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Modify Through Pointer (5 points)
+        test-name: Modify Through Pointer (2 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -127,13 +127,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 2
 
-    - name: Pointer Arithmetic +1 (5 points)
+    - name: Pointer Arithmetic +1 (2 points)
       id: arith-plus1
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Pointer Arithmetic +1 (5 points)
+        test-name: Pointer Arithmetic +1 (2 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -142,13 +142,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 2
 
-    - name: Pointer Arithmetic +3 (5 points)
+    - name: Pointer Arithmetic +3 (1 point)
       id: arith-plus3
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Pointer Arithmetic +3 (5 points)
+        test-name: Pointer Arithmetic +3 (1 point)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -157,13 +157,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 1
 
-    - name: Walking with Pointer Loop (5 points)
+    - name: Walking with Pointer Loop (2 points)
       id: walk-ptr
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Walking with Pointer Loop (5 points)
+        test-name: Walking with Pointer Loop (2 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -172,15 +172,15 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 2
 
     # ==================== Pointers as Arrays Tests ====================
 
-    - name: Bracket Index ptr[0] (5 points)
+    - name: Bracket Index ptr[0] (2 points)
       id: bracket-ptr0
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Bracket Index ptr[0] (5 points)
+        test-name: Bracket Index ptr[0] (2 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -189,13 +189,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 2
 
-    - name: Bracket Index ptr[2] (5 points)
+    - name: Bracket Index ptr[2] (1 point)
       id: bracket-ptr2
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Bracket Index ptr[2] (5 points)
+        test-name: Bracket Index ptr[2] (1 point)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -204,13 +204,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 1
 
-    - name: Bracket Index ptr[4] (5 points)
+    - name: Bracket Index ptr[4] (1 point)
       id: bracket-ptr4
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Bracket Index ptr[4] (5 points)
+        test-name: Bracket Index ptr[4] (1 point)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -219,13 +219,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 1
 
-    - name: Loop Prints All Elements (5 points)
+    - name: Loop Prints All Elements (2 points)
       id: loop-all
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Loop Prints All Elements (5 points)
+        test-name: Loop Prints All Elements (2 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -234,15 +234,15 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 2
 
     # ==================== Arrays as Pointers Tests ====================
 
-    - name: Array Decay Calls printArray (5 points)
+    - name: Array Decay Calls printArray (2 points)
       id: array-decay
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Array Decay Calls printArray (5 points)
+        test-name: Array Decay Calls printArray (2 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -251,13 +251,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 2
 
-    - name: Dereference Array Name (5 points)
+    - name: Dereference Array Name (2 points)
       id: deref-array
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Dereference Array Name (5 points)
+        test-name: Dereference Array Name (2 points)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -266,13 +266,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 2
 
-    - name: Array Name + Offset 2 (5 points)
+    - name: Array Name + Offset 2 (1 point)
       id: array-offset2
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Array Name + Offset 2 (5 points)
+        test-name: Array Name + Offset 2 (1 point)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -281,13 +281,13 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 1
 
-    - name: Array Name + Offset 4 (5 points)
+    - name: Array Name + Offset 4 (1 point)
       id: array-offset4
       uses: classroom-resources/autograding-command-grader@v1
       with:
-        test-name: Array Name + Offset 4 (5 points)
+        test-name: Array Name + Offset 4 (1 point)
         setup-command: ''
         command: |
           if [ -f build/run_tests ]; then
@@ -296,7 +296,7 @@ jobs:
             exit 1
           fi
         timeout: 10
-        max-score: 5
+        max-score: 1
 
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
