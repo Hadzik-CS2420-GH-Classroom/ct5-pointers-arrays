@@ -11,13 +11,13 @@ void printArray(const int* arr, int size) {
     }
 }
 //
-// DISCUSSION: Why const int* arr and not int* arr?
+// ! DISCUSSION: Why const int* arr and not int* arr?
 //   The const means this function promises not to modify the data
 //   through the pointer. It's a read-only view. This is good practice:
 //   if a function only needs to read data, mark the pointer const.
 //   The compiler will catch accidental writes (e.g., *arr = 5 won't compile).
 //
-// DISCUSSION: Why does the parameter say int* but we pass an array?
+// ! DISCUSSION: Why does the parameter say int* but we pass an array?
 //   When you write void foo(int arr[]), the compiler secretly rewrites
 //   it to void foo(int* arr). There is NO difference — array parameters
 //   are always pointers. This means sizeof(arr) inside the function gives
@@ -38,7 +38,7 @@ void arraysAsPointers() {
 
     // TODO: Call printArray, passing 'grades' as the first argument and 'size' as the second
     //
-    // DISCUSSION: What is "array decay"?
+    // ! DISCUSSION: What is "array decay"?
     //   When an array is used where a pointer is expected, the compiler
     //   automatically converts (decays) it to a pointer to its first element.
     //   grades  -->  &grades[0]  (happens silently)
@@ -62,14 +62,14 @@ void arraysAsPointers() {
     // TODO: Print the value of *grades (dereference the array name as if it were a pointer)
     // Expected output: "First element (*grades): 95"
     //
-    // DISCUSSION: Why can we dereference an array name with *?
+    // ! DISCUSSION: Why can we dereference an array name with *?
     //   Because 'grades' decays to a pointer in this expression.
     //   *grades is the same as *(grades + 0) which is grades[0].
 
     // TODO: Print the value of *(grades + 2)
     // Expected output: "Third element *(grades + 2): 72"
     //
-    // DISCUSSION: How is *(grades + 2) different from grades[2]?
+    // ! DISCUSSION: How is *(grades + 2) different from grades[2]?
     //   They are identical. grades[2] is defined as *(grades + 2).
     //   The bracket notation is just a more readable way to write
     //   pointer arithmetic. Use whichever is clearer in context.
@@ -84,7 +84,7 @@ void arraysAsPointers() {
     std::cout << "  ptr = nullptr;      // OK - pointer can be reassigned" << '\n';
     std::cout << "  // grades = ptr;    // ERROR - array name can't be reassigned!" << '\n';
     //
-    // DISCUSSION: Why can't you reassign an array name?
+    // ! DISCUSSION: Why can't you reassign an array name?
     //   An array name is NOT a pointer variable — it's a label for a block
     //   of memory the compiler allocated. It always refers to that same
     //   block. A pointer is a variable that holds an address and can be
