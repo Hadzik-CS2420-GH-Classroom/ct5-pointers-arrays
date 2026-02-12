@@ -143,6 +143,12 @@ void pointersAndArrays() {
     //   in C++ because it avoids creating an unnecessary temporary copy.
     //   For plain pointers the compiler optimizes both to the same code,
     //   but ++p is the idiomatic C++ habit to build early.
+    //
+    // ! DISCUSSION: In modern C++, you'd normally use a range-based for loop:
+    //     for (int num : numbers) { std::cout << num << " "; }
+    //   This is cleaner, safer, and less error-prone — no pointer,
+    //   no bounds to get wrong. But understanding the pointer version
+    //   above is essential — it's what the range-based for does under the hood!
 
     std::cout << "Walking with pointer: ";
 
