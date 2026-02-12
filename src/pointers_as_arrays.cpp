@@ -63,9 +63,5 @@ void pointersAsArrays() {
     std::cout << "\nBonus - these are equivalent:" << '\n';
     std::cout << "  ptr[2]      = " << ptr[2] << '\n';
     std::cout << "  *(ptr + 2)  = " << *(ptr + 2) << '\n';
-    //
-    // ! DISCUSSION: Fun fact — 2[ptr] also works!
-    //   Since ptr[2] is *(ptr + 2), and addition is commutative,
-    //   2[ptr] is *(2 + ptr) which is the same thing. You'll never
-    //   write this in real code, but it proves [] is just pointer math.
+    
 }
