@@ -1,39 +1,44 @@
-# CT5 – Pointers & Arrays Basics (Indexing, Pointer Arithmetic)
+# CT5 – Pointers & Arrays Basics
 
-## Topics Covered in CT5
+## Overview
 
-| Topic | Items |
-|---|---|
-| Pointers and arrays | 4 |
-| Treating pointers as arrays | 2 |
-| Treating arrays as pointers | 1 |
+An in-class code-together activity introducing pointers, arrays, and the relationship between them. Students complete TODO items in three source files while the instructor walks through concepts using discussion comments and diagrams.
 
-These are foundational concepts — understanding how pointers and arrays relate, indexing, pointer arithmetic, and the interchangeability between pointers and arrays.
+## Files
 
----
+| File | Focus | TODOs |
+|---|---|---|
+| `pointers_and_arrays.cpp` | Declaring pointers, addresses, dereferencing, pointer arithmetic | 10 |
+| `pointers_as_arrays.cpp` | Using `[]` on pointers, looping with `ptr[i]` | 4 |
+| `arrays_as_pointers.cpp` | Array decay, passing arrays to pointer parameters | 4 |
 
-## Topics Covered in CT6 – Building a Simple Dynamic Array (Resize + Copy)
+## Teaching Order
 
-| Topic | Items |
-|---|---|
-| The `new` and `delete` operators (`shared_ptr` and `unique_ptr` allowed) | 1 |
-| Two dimensional arrays | 1 |
-| Dynamic arrays | 1 |
+Work through the files in the order `main.cpp` calls them:
 
-These deal with heap allocation and dynamic memory. `new`/`delete` is needed to build a dynamic array, and 2D arrays often involve dynamic allocation. The resize + copy activity is the context to introduce all three.
+### 1. `pointers_and_arrays.cpp` — Foundation 
 
-Start with pointers_and_arrays.cpp — this is the foundation. Walk through in section order:
+1. **Declaring pointers and arrays** — what a pointer is, pointing at an array element
+2. **Address of array elements** — arrays live in contiguous memory (the "aha" moment when addresses differ by 4 bytes)
+3. **Dereferencing** — reading and writing through a pointer (`*` and `&` operators)
+4. **Pointer arithmetic** — walking through memory with `start + n`
 
-Declaring pointers and arrays — students first see what a pointer is and how to point at an array element
-Address of array elements — they see that arrays live in contiguous memory (the "aha" moment when addresses differ by 4 bytes)
-Dereferencing — they learn to read and write through a pointer
-Pointer arithmetic — now they can walk through memory, which sets up everything else
-Then pointers_as_arrays.cpp — the natural follow-up:
+### 2. `pointers_as_arrays.cpp` — Natural follow-up
 
-Bracket indexing on a pointer — "wait, ptr[2] works on a pointer too?"
-Looping with ptr[i] — reinforces that ptr[i] is just *(ptr + i) (the bonus at the bottom ties it together)
-Finish with arrays_as_pointers.cpp — the flip side:
+1. **Bracket indexing on a pointer** — `ptr[2]` works on a pointer too
+2. **Looping with `ptr[i]`** — reinforces that `ptr[i]` is just `*(ptr + i)`
 
-Array decay — passing grades to a const int* parameter — "the compiler does this automatically?"
-Pointer arithmetic on array name — *(grades + 2) works directly on the array
-This is already the order main.cpp calls them, so you're set. I'd suggest spending the most time on pointers_and_arrays.cpp since it has 10 TODOs and covers the core mental model. The other two go faster once students have that foundation.
+### 3. `arrays_as_pointers.cpp` — The flip side
+
+1. **Array decay** — passing `grades` to a `const int*` parameter happens automatically
+2. **Pointer arithmetic on array name** — `*(grades + 2)` works directly on the array
+
+## Diagrams
+
+Three SVG/PNG diagrams support the activity. Source SVGs are in `images/svg/`, PNG exports in `images/`.
+
+| Diagram | Referenced In | Shows |
+|---|---|---|
+| `array_in_memory` | `pointers_and_arrays.cpp` | Array memory layout, addresses, pointer arithmetic arrows |
+| `pointer_address_value` | `pointers_and_arrays.cpp` | `*` and `&` operators, addresses vs values, "* does double duty" |
+| `pointer_as_array` | `pointers_as_arrays.cpp` | `data` and `ptr` pointing to same memory, `ptr[2] = *(ptr+2)` equivalence |
