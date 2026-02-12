@@ -138,11 +138,20 @@ void pointersAndArrays() {
     //   This is the same pattern as iterators: begin() to end(), where
     //   end() is one past the last element.
     //
+    // ! DISCUSSION: Does ++p skip the first element?
+    //   No! In a for loop, the update step (++p) runs AFTER each iteration,
+    //   not before the first one. The order is: init → check → body → update.
+    //   So p starts at numbers[0], prints it, THEN advances to numbers[1].
+    //
     // ! DISCUSSION: Why ++p and not p++?
-    //   Both increment p by one element. ++p (pre-increment) is preferred
-    //   in C++ because it avoids creating an unnecessary temporary copy.
-    //   For plain pointers the compiler optimizes both to the same code,
-    //   but ++p is the idiomatic C++ habit to build early.
+    //   Both increment p by one element, and both produce the same loop output.
+    //   The difference:
+    //     ++p  (pre-increment)  — increments p, then returns the NEW value
+    //     p++  (post-increment) — saves a copy of p, increments p, returns the OLD copy
+    //   In this for loop it doesn't matter since we discard the return value.
+    //   But ++p is preferred in C++ because p++ creates an unnecessary
+    //   temporary copy. For plain pointers the compiler optimizes it away,
+    //   but ++p is the standard C++ style and a good habit to build early.
     //
     // ! DISCUSSION: In modern C++, you'd normally use a range-based for loop:
     //     for (int num : numbers) { std::cout << num << " "; }
