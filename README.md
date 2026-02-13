@@ -16,7 +16,7 @@ An in-class code-together activity introducing pointers, arrays, and the relatio
 
 Work through the files in the order `main.cpp` calls them:
 
-### 1. `pointers_and_arrays.cpp` — Foundation 
+### 1. `pointers_and_arrays.cpp` — Foundation
 
 1. **Declaring pointers and arrays** — what a pointer is, pointing at an array element
 2. **Address of array elements** — arrays live in contiguous memory (the "aha" moment when addresses differ by 4 bytes)
@@ -42,3 +42,31 @@ Three SVG/PNG diagrams support the activity. Source SVGs are in `images/svg/`, P
 | `array_in_memory` | `pointers_and_arrays.cpp` | Array memory layout, addresses, pointer arithmetic arrows |
 | `pointer_address_value` | `pointers_and_arrays.cpp` | `*` and `&` operators, addresses vs values, "* does double duty" |
 | `pointer_as_array` | `pointers_as_arrays.cpp` | `data` and `ptr` pointing to same memory, `ptr[2] = *(ptr+2)` equivalence |
+
+## Comment Conventions
+
+Uses [Better Comments](https://marketplace.visualstudio.com/items?itemName=OmarRwemi.BetterComments) for VS 2022:
+
+| Prefix | Color | Purpose |
+|---|---|---|
+| `// !` | Important (red) | `DISCUSSION:` teaching notes for instructor walkthrough |
+| `// ?` | Question (blue) | `SEE DIAGRAM:` references to visual aids |
+| `// TODO:` | Task (orange) | Student exercises (main branch) |
+
+## Branches
+
+| Branch | Purpose |
+|---|---|
+| `main` | Student skeleton — TODO stubs with expected output, no solution code |
+| `solutions` | Instructor reference — TODO replaced with SOLUTION + working code |
+
+Both branches share identical DISCUSSION comments, SEE DIAGRAM references, and images.
+
+## Building
+
+CMake project. Open in Visual Studio 2022 or build from command line:
+
+```
+cmake -B build -S .
+cmake --build build
+```
