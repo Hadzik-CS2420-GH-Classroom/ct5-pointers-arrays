@@ -64,20 +64,3 @@ Uses [Better Comments](https://marketplace.visualstudio.com/items?itemName=OmarR
 | `// ?` | Question (blue) | `SEE DIAGRAM:` references to visual aids |
 | `// TODO:` | Task (orange) | Student exercises (main branch) |
 
-## Branches
-
-| Branch | Purpose |
-|---|---|
-| `main` | Student skeleton — TODO stubs with expected output, no solution code |
-| `solutions` | Instructor reference — TODO replaced with SOLUTION + working code |
-
-Both branches share identical DISCUSSION comments, SEE DIAGRAM references, and images.
-
-## Building
-
-CMake project. Open in Visual Studio 2022 or build from command line:
-
-```
-cmake -B build -S .
-cmake --build build
-```
