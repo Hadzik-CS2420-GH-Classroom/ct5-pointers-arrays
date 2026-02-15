@@ -35,13 +35,24 @@ Work through the files in the order `main.cpp` calls them:
 
 ## Diagrams
 
-Three SVG/PNG diagrams support the activity. Source SVGs are in `images/svg/`, PNG exports in `images/`.
+Four SVG/PNG diagrams support the activity. Source SVGs are in `images/svg/`, PNG exports in `images/`.
 
 | Diagram | Referenced In | Shows |
 |---|---|---|
 | `array_in_memory` | `pointers_and_arrays.cpp` | Array memory layout, addresses, pointer arithmetic arrows |
 | `pointer_address_value` | `pointers_and_arrays.cpp` | `*` and `&` operators, addresses vs values, "* does double duty" |
 | `pointer_as_array` | `pointers_as_arrays.cpp` | `data` and `ptr` pointing to same memory, `ptr[2] = *(ptr+2)` equivalence |
+| `pre_vs_post_increment` | `pointers_and_arrays.cpp` | `++p` vs `p++` step by step, why pre-increment is preferred |
+
+## Grading (40 points)
+
+| Category | Points | What is tested |
+|---|---|---|
+| Build | 2 | Project compiles without errors |
+| `pointers_and_arrays.cpp` | 22 | Declaring pointers, addresses, dereferencing, pointer arithmetic, pointer walking loop |
+| `pointers_as_arrays.cpp` | 8 | Bracket indexing on pointers, looping with `ptr[i]` |
+| `arrays_as_pointers.cpp` | 8 | Array decay, pointer arithmetic on array name |
+| **Total** | **40** | |
 
 ## Comment Conventions
 
