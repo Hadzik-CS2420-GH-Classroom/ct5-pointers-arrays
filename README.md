@@ -35,7 +35,7 @@ Work through the files in the order `main.cpp` calls them:
 
 ## Diagrams
 
-Four SVG/PNG diagrams support the activity. Source SVGs are in `images/svg/`, PNG exports in `images/`.
+Seven SVG/PNG diagrams support the activity. Source SVGs are in `images/svg/`, PNG exports in `images/`.
 
 | Diagram | Referenced In | Shows |
 |---|---|---|
@@ -43,6 +43,9 @@ Four SVG/PNG diagrams support the activity. Source SVGs are in `images/svg/`, PN
 | `pointer_address_value` | `pointers_and_arrays.cpp` | `*` and `&` operators, addresses vs values, "* does double duty" |
 | `pointer_as_array` | `pointers_as_arrays.cpp` | `data` and `ptr` pointing to same memory, `ptr[2] = *(ptr+2)` equivalence |
 | `pre_vs_post_increment` | `pointers_and_arrays.cpp` | `++p` vs `p++` step by step, why pre-increment is preferred |
+| `for_loop_order_post` | `pointers_and_arrays.cpp` | `for` loop execution order with `p++` — increment runs after the body, return value discarded |
+| `for_loop_order` | `pointers_and_arrays.cpp` | `for` loop execution order with `++p` — addresses the misconception that `++p` runs before the first iteration |
+| `pointer_loop_increment_asm` | `pointers_and_arrays.cpp` | Pointer `for` loop with assembly output — why `++p` is preferred, and why it matters for iterators |
 
 ## Grading (40 points)
 
